@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Modern Signup UI</title>
+<link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+<div class="app">
+
+   
+    <div class="left">
+        <h1>Welcome </h1>
+        <p>Create your account and start your journey.</p>
+    </div>
+
+    <div class="right">
+
+        <div class="section">
+            <h3>Basic Information</h3>
+            <input type="text" placeholder="Full Name" id="name">
+            <input type="email" placeholder="Email" id="email">
+        </div>
+
+        <div class="section">
+            <h3>Security</h3>
+            <input type="password" placeholder="Password" id="password">
+            <input type="password" placeholder="Confirm Password" id="confirm">
+        </div>
+
+        <div class="section">
+            <h3>Personal</h3>
+            <div class="row">
+                <input type="number" placeholder="Age">
+                <select>
+                    <option>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Contact</h3>
+            <input type="text" placeholder="+91 XXXXXXXX">
+        </div>
+
+        <div class="section">
+            <h3>Location</h3>
+            <select>
+                <option>Select State</option>
+                <option>Maharashtra</option>
+                <option>Gujarat</option>
+                <option>Karnataka</option>
+            </select>
+        </div>
+
+        <button class="signup" onclick="validateAndSignup()">Create Account</button>
+        <button class="google">Login with Google</button>
+        <button class="github">Login with GitHub</button>
+        <button class="login">Already have an account? Login</button>
+
+    </div>
+</div>
+
+
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <h2>🎉 Success!</h2>
+        <p>Account created successfully.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script src="signup.js"></script>
+
+</body>
+</html>
