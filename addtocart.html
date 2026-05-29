@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LUXECART Cart</title>
+  <link rel="stylesheet" href="addtocart.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo-section">
+      <div class="logo">L</div>
+      <div class="brand-text">
+        <h2>LUXECART</h2>
+        <p>Premium Shopping</p>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search for products, brands and more">
+    </div>
+
+    <div class="nav-right">
+      <button class="login-btn">Login</button>
+      <a href="#">Become a Seller</a>
+      <a href="#">More</a>
+      <a href="#">Cart</a>
+    </div>
+
+  </nav>
+
+
+  <!-- MAIN -->
+  <div class="main-container">
+
+    <!-- LEFT -->
+    <div class="cart-left">
+
+      <div class="delivery-box">
+        <p>Deliver to: <strong>Ganesh Ghumare</strong> - 431512</p>
+        <button>Change</button>
+      </div>
+
+      <!-- ITEM 1 -->
+      <div class="cart-card">
+
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop" alt="">
+        </div>
+
+        <div class="product-details">
+          <h3>Premium Sneakers</h3>
+          <p class="seller">Seller: LUXE Fashion</p>
+
+          <div class="price-row">
+            <span class="old-price">₹6999</span>
+            <span class="new-price">₹4999</span>
+            <span class="offer">28% Off</span>
+          </div>
+
+          <div class="quantity-section">
+            <button onclick="decreaseQty(0)">-</button>
+            <span id="qty0">1</span>
+            <button onclick="increaseQty(0)">+</button>
+          </div>
+
+          <div class="action-buttons">
+            <button>Save for Later</button>
+            <button>Remove</button>
+          </div>
+        </div>
+
+        <div class="product-total" id="total0">
+          ₹4999
+        </div>
+
+      </div>
+
+
+      <!-- ITEM 2 -->
+      <div class="cart-card">
+
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1000&auto=format&fit=crop" alt="">
+        </div>
+
+        <div class="product-details">
+          <h3>Luxury Watch</h3>
+          <p class="seller">Seller: Time Hub</p>
+
+          <div class="price-row">
+            <span class="old-price">₹10999</span>
+            <span class="new-price">₹8999</span>
+            <span class="offer">18% Off</span>
+          </div>
+
+          <div class="quantity-section">
+            <button onclick="decreaseQty(1)">-</button>
+            <span id="qty1">1</span>
+            <button onclick="increaseQty(1)">+</button>
+          </div>
+
+          <div class="action-buttons">
+            <button>Save for Later</button>
+            <button>Remove</button>
+          </div>
+        </div>
+
+        <div class="product-total" id="total1">
+          ₹8999
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="cart-right">
+      <div class="price-details">
+
+        <h3>PRICE DETAILS</h3>
+    
+        <div class="price-item">
+            <span>Price (2 items)</span>
+            <span id="subtotal">₹13998</span>
+        </div>
+    
+        <div class="price-item">
+            <span>Discount</span>
+            <span class="green" id="discountAmount">− ₹2000</span>
+        </div>
+    
+        <div class="price-item">
+            <span>Delivery Charges</span>
+            <span class="green">FREE</span>
+        </div>
+    
+        <!-- COUPON SECTION -->
+        <div class="coupon-section">
+    
+            <input 
+                type="text" 
+                id="couponInput"
+                placeholder="Enter Coupon Code"
+            >
+    
+            <button onclick="applyCoupon()">
+                Apply
+            </button>
+    
+        </div>
+    
+        <div class="total-section">
+            <span>Total Amount</span>
+            <span id="grandTotal">₹13998</span>
+        </div>
+    
+        <p class="save-text" id="saveText">
+            You will save ₹2000 on this order
+        </p>
+    
+        <button class="place-order-btn" onclick="goToPayment()">
+          PLACE ORDER
+      </button>
+    </div>
+
+    </div>
+
+  </div>
+
+<script src="addtocart.js"></script>
+
+</body>
+</html>

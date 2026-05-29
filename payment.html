@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Payment UI</title>
+<link rel="stylesheet" href="payment.css">
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <div class="left">
+        <h1>Secure Payment</h1>
+        <p>Complete your payment safely using Razorpay.</p>
+    </div>
+
+    <div class="right">
+
+        <div class="section">
+            <h3>Customer Information</h3>
+            <input type="text" placeholder="Full Name" id="name">
+            <input type="email" placeholder="Email Address" id="email">
+            <input type="text" placeholder="+91 XXXXX XXXXX" id="phone">
+        </div>
+
+        <div class="section">
+            <h3>Billing Address</h3>
+            <input type="text" placeholder="Address">
+            <div class="row">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="PIN Code">
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Payment Summary</h3>
+
+            <div class="summary">
+                <div>
+                    <span>Premium Plan</span>
+                    <span>₹999</span>
+                </div>
+
+                <div>
+                    <span>GST</span>
+                    <span>₹99</span>
+                </div>
+
+                <div class="total">
+                    <span>Total</span>
+                    <span>₹1098</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="pay-btn" onclick="payNow()">
+            Pay with Razorpay
+        </button>
+
+        <button class="cancel">
+            Cancel Payment
+        </button>
+
+    </div>
+
+</div>
+
+
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <h2>🎉 Payment Successful</h2>
+        <p>Your transaction has been completed.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script src="payment.js"></script>
+
+</body>
+</html>
